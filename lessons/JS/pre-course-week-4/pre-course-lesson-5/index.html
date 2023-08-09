@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Добавление записей</title>
+</head>
+<body>
+  <hr>
+  <input type="text" id="myInput">
+  <button id="myButton">Добавить запись</button>
+  <div id="container"></div>
+
+  <script>
+    const input = document.getElementById("myInput");
+    const button = document.getElementById("myButton");
+    const container = document.getElementById("container");
+
+    button.addEventListener("click", function () {
+      const text = input.value;
+
+      const wrapper = document.createElement("div");
+      const span = document.createElement("span");
+      const deleteButton = document.createElement("button");
+
+      span.textContent = text;
+      deleteButton.textContent = "Удалить";
+      deleteButton.addEventListener("click", function () {
+        container.removeChild(wrapper);
+      });
+
+      wrapper.appendChild(span);
+      wrapper.appendChild(deleteButton);
+      container.appendChild(wrapper);
+
+      input.value = "";
+    });
+  </script>
+</body>
+</html>

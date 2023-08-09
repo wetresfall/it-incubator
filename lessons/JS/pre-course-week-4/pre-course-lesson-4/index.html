@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Number Generator</title>
+</head>
+<body>
+  <hr>
+  <button id="button4">КНОПКА-4</button>
+  <div id="output"></div>
+
+  <script>
+    const button4 = document.querySelector('#button4');
+    const output = document.querySelector('#output');
+
+    button4.addEventListener('click', () => {
+      const randomNumber = Math.floor(Math.random() * 10) + 1;
+      const message = document.createElement('p');
+      message.textContent = 'Случайное число: ' + randomNumber;
+      output.appendChild(message);
+    });
+  </script>
+</body>
+</html>
