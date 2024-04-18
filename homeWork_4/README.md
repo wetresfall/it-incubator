@@ -1,5 +1,3 @@
-# My projects:
-
 # My pre-course projects:
 
 ## homeWork_4 (time)
